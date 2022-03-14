@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/general_nav"
+    app:startDestination="@id/forum">
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.lamont.assignment.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/whiteFlag"
+        android:name="com.lamont.assignment.WhiteFlag"
+        android:label="fragment_white_flag"
+        tools:layout="@layout/fragment_white_flag" />
+    <fragment
+        android:id="@+id/forum"
+        android:name="com.lamont.assignment.forum"
+        android:label="fragment_forum"
+        tools:layout="@layout/fragment_forum" />
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.lamont.assignment.Quiz"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+</navigation>
