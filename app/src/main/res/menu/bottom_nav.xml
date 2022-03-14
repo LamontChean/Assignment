@@ -15,6 +15,11 @@
         android:icon="@drawable/ic_baseline_add_circle_24"
         android:title="Add Post" />
     <item
+        android:id="@+id/quiz"
+        android:icon="@drawable/ic_baseline_cookie_24"
+        android:title="Quiz"
+        />
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile" />
