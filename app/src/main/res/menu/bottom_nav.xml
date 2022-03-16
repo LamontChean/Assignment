@@ -4,24 +4,24 @@
     <item
         android:id="@+id/forum"
         android:icon="@drawable/home_icon"
-        android:title="Home"
+        android:title="@string/home"
         />
     <item
         android:id="@+id/whiteFlag"
         android:icon="@drawable/white_flag"
-        android:title="White Flag"
+        android:title="@string/white_flag"
         />
     <item
         android:id="@+id/post"
         android:icon="@drawable/add_post"
-        android:title="Add Post" />
+        android:title="@string/add_post" />
     <item
         android:id="@+id/quiz"
         android:icon="@drawable/puzzle_piece"
-        android:title="Quiz"
+        android:title="@string/quiz"
         />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:title="@string/profile" />
 </menu>
