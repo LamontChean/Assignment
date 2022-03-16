@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/drawable/custom_input.xml" value="0.2555" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2235" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_main.xml" value="0.26856884057971014" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_module.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_forum.xml" value="0.2536231884057971" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/layout/fragment_login.xml" value="0.2" />
+        <entry key="..\:/Users/Public/AndroidStudioProjects/Assignment/app/src/main/res/menu/bottom_nav.xml" value="0.264" />
         <entry key="..\:/Users/user/Assignment/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/user/Assignment/app/src/main/res/layout/fragment_forum.xml" value="0.22780797101449277" />
-        <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23" />
         <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1475" />
-        <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/drawable/ic_baseline_cookie_24.xml" value="0.1015" />
-        <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23" />
         <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/layout/fragment_forum.xml" value="0.1213768115942029" />
         <entry key="..\:/Year 2/SEM 3/Mobile App Development/Assignment/app/src/main/res/layout/fragment_profile.xml" value="0.15172101449275363" />
