@@ -13,15 +13,15 @@
         />
     <item
         android:id="@+id/post"
-        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:icon="@drawable/add_post"
         android:title="Add Post" />
     <item
         android:id="@+id/quiz"
-        android:icon="@drawable/ic_baseline_cookie_24"
+        android:icon="@drawable/puzzle_piece"
         android:title="Quiz"
         />
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_person_24"
+        android:icon="@drawable/profile"
         android:title="Profile" />
 </menu>
