@@ -9,7 +9,8 @@
     <item
         android:id="@+id/whiteFlag"
         android:icon="@drawable/ic_baseline_emoji_flags_24"
-        android:title="White Flag" />
+        android:title="White Flag"
+        />
     <item
         android:id="@+id/post"
         android:icon="@drawable/ic_baseline_add_circle_24"
