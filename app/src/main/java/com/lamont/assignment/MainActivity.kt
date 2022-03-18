@@ -5,15 +5,16 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.lamont.assignment.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        //Bottom Navigation Bar
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.loginRegister)
-        val navController = findNavController(R.id.account_fragment)
-        bottomNavigationView.setupWithNavController(navController)
+
     }
 }
