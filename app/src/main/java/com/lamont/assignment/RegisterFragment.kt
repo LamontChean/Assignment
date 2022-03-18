@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.lamont.assignment.databinding.FragmentRegisterBinding
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,6 +34,7 @@ class RegisterFragment : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
         val view = binding.root
         // Inflate the layout for this fragment
@@ -46,8 +48,15 @@ class RegisterFragment : Fragment(){
             navController.navigate(R.id.loginFragment)
         }
 
-        binding.etDob.setOnClickListener {
+        val systemCal = Calendar.getInstance()
+        val year = systemCal.get(Calendar.YEAR)
+        val month = systemCal.get(Calendar.MONTH)
+        val day = systemCal.get(Calendar.DAY_OF_MONTH)
 
+        binding.etDob.setOnClickListener {
+            DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDay ->
+                binding.etDob.setText("$mDay/$mMonth/$mYear")
+            }, year, month, day).show()
         }
     }
 

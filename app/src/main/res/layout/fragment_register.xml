@@ -112,6 +112,7 @@
         android:inputType="date"
         android:drawableRight="@drawable/date_field_icon"
         android:clickable="true"
+        android:focusable="false"
         />
 
     <Button
