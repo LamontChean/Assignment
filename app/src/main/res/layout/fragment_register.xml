@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo"
         android:inputType="text"
-        android:autofillHints="username" />
+        android:drawableRight="@drawable/name_field_icon" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etUsername"
         android:inputType="textEmailAddress"
-        android:autofillHints="password" />
+        android:drawableRight="@drawable/mail_field_icon" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         android:inputType="textPassword"
-        android:autofillHints="password" />
+        android:drawableRight="@drawable/password_field_icon" />
 
     <EditText
         android:id="@+id/etConPassword"
@@ -79,22 +79,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPassword"
         android:inputType="textPassword"
-        android:autofillHints="password" />
+        android:drawableRight="@drawable/password_field_icon" />
 
-    <EditText
-        android:id="@+id/etAddress"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/custom_input"
-        android:hint="@string/address"
-        android:padding="10dp"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etConPassword"
-        android:inputType="textPassword"
-        android:autofillHints="password" />
 
     <EditText
         android:id="@+id/etPhone"
@@ -107,13 +93,13 @@
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etAddress"
+        app:layout_constraintTop_toBottomOf="@id/etConPassword"
         android:inputType="phone"
-        android:autofillHints="password" />
+        android:drawableRight="@drawable/phone_field_icon" />
 
     <EditText
         android:id="@+id/etDob"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/custom_input"
@@ -123,7 +109,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPhone"
-        android:inputType="date"/>
+        android:inputType="date"
+        android:drawableRight="@drawable/date_field_icon"
+        android:clickable="true"
+        />
 
     <Button
         android:id="@+id/register_button"

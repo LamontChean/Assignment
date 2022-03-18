@@ -1,5 +1,6 @@
 package com.lamont.assignment
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,7 +19,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [RegisterFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RegisterFragment : Fragment() {
+class RegisterFragment : Fragment(){
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -43,6 +44,10 @@ class RegisterFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             val navController = findNavController()
             navController.navigate(R.id.loginFragment)
+        }
+
+        binding.etDob.setOnClickListener {
+
         }
     }
 
