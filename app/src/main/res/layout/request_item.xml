@@ -31,15 +31,18 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_light"
                 android:text="sample Name"
-                android:textColor="@color/theme_blue" />
+                android:textColor="@color/theme_blue"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_light"
                 android:text="sample a b c d e"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tvCat"
