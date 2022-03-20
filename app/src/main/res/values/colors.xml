@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="grey">#AAAAAA</color>
-    <color name="theme_blue">#0F0241</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Customize Color Code -->
+    <color name="purple_card">#D7D3E3</color>
+    <color name="theme_blue">#0F0241</color>
 </resources>
