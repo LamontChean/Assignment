@@ -31,7 +31,7 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comfortaa_light"
+                android:fontFamily="@font/balsamiq_sans"
                 android:text="sample Name"
                 android:textColor="@color/theme_blue"
                 android:textStyle="bold" />
@@ -40,7 +40,7 @@
                 android:id="@+id/tvDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comfortaa_light"
+                android:fontFamily="@font/balsamiq_sans"
                 android:text="sample a b c d e"
                 android:textColor="@color/black" />
 
