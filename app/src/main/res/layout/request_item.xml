@@ -7,8 +7,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardRequest"
         android:layout_width="280dp"
@@ -20,48 +20,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/btnDonate"
-        >
+        app:layout_constraintRight_toLeftOf="@+id/btnDonate">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="8dp">
+
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sample Name"
-                android:textColor="@color/theme_blue"
-                />
+                android:textColor="@color/theme_blue" />
+
             <TextView
                 android:id="@+id/tvDesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="sample a b c d e"
-                />
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/tvCat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:text="Its me" />
+                android:text="Its me"
+                android:textColor="@color/theme_blue" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
         <Button
             android:id="@+id/btnDonate"
-            android:layout_width="90dp"
+            android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:text="Donate"
-            android:background="@drawable/custom_button"
+            android:background="@drawable/custom_oval_button"
             android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="@+id/cardRequest"
             app:layout_constraintBottom_toBottomOf="@id/cardRequest"
             app:layout_constraintStart_toEndOf="@id/cardRequest"
+            android:layout_marginStart="5dp"
+            android:textSize="13sp"
             />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
