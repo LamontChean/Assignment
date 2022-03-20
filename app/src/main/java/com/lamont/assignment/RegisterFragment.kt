@@ -16,20 +16,15 @@ class RegisterFragment : Fragment(){
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
-        val view = binding.root
+
         // Inflate the layout for this fragment
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,7 +40,7 @@ class RegisterFragment : Fragment(){
         val day = systemCal.get(Calendar.DAY_OF_MONTH)
 
         binding.etDob.setOnClickListener {
-            DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDay ->
+            DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{ view, mYear, mMonth, mDay ->
                 binding.etDob.setText("$mDay/$mMonth/$mYear")
             }, year, month, day).show()
         }
