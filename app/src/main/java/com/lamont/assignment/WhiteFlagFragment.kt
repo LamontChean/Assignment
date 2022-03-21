@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.*
 import com.lamont.assignment.adapter.RequestAdapter
 import com.lamont.assignment.data.RequestSource
 import com.lamont.assignment.databinding.FragmentWhiteFlagBinding

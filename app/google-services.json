@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "506981700270",
-    "project_id": "bewithyouth",
-    "storage_bucket": "bewithyouth.appspot.com"
+    "project_number": "893318989992",
+    "project_id": "bewithyouth-28168",
+    "storage_bucket": "bewithyouth-28168.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:506981700270:android:846ff778325d591423133f",
+        "mobilesdk_app_id": "1:893318989992:android:e9a69af16a0617161bda9d",
         "android_client_info": {
           "package_name": "com.lamont.assignment"
         }
       },
       "oauth_client": [
         {
-          "client_id": "506981700270-vvmg7q5ss74t77rj4kedfqvhdjhrdodl.apps.googleusercontent.com",
+          "client_id": "893318989992-igdnbij8v5js5ss72gpi7mhjlcq2vptb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdzcqgBHND9ubhDiL-2AnECEtDELJmiBk"
+          "current_key": "AIzaSyBxaxD0g-vli3H5j9Qhrtkc77gGjaRhHtw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "506981700270-vvmg7q5ss74t77rj4kedfqvhdjhrdodl.apps.googleusercontent.com",
+              "client_id": "893318989992-igdnbij8v5js5ss72gpi7mhjlcq2vptb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
