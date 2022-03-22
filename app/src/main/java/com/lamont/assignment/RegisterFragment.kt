@@ -9,8 +9,17 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.toObject
 import com.lamont.assignment.databinding.FragmentRegisterBinding
+import com.lamont.assignment.model.User
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.system.exitProcess
 
 
@@ -36,26 +45,19 @@ class RegisterFragment : Fragment(){
             navController.navigate(R.id.loginFragment)
         }
 
-        binding.registerButton.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val email = binding.etEmail.text.toString()
-            val password = binding.etPassword.text.toString()
-            val conPassword = binding.etConPassword.text.toString()
-            val phone = binding.etPhone.text.toString()
-            val birthdate = binding.etDob.text.toString()
+            binding.registerButton.setOnClickListener {
+                val username = binding.etUsername.text.toString()
+                val email = binding.etEmail.text.toString()
+                val password = binding.etPassword.text.toString()
+                val conPassword = binding.etConPassword.text.toString()
+                val phone = binding.etPhone.text.toString()
+                val birthdate = binding.etDob.text.toString()
 
-            if(username != "" && email != "" && password != "" && conPassword != "" && phone != "" && birthdate != "") {
-                if (checkUserExists(username, email, phone)) {
-                    Toast.makeText(requireContext(), "Validated", Toast.LENGTH_SHORT).show()
-                }else{
-                    Toast.makeText(requireContext(), "User Existed", Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                Toast.makeText(requireContext(), "Invalid", Toast.LENGTH_SHORT).show()
+                addUser(username, email, password, conPassword, phone, birthdate)
+
             }
 
 
-        }
 
         val systemCal = Calendar.getInstance()
         val year = systemCal.get(Calendar.YEAR)
@@ -69,22 +71,43 @@ class RegisterFragment : Fragment(){
         }
     }
 
-    fun checkUserExists(username:String, email:String, phone:String): Boolean {
+    fun addUser(username:String, email:String, password:String, conPassword:String, phone:String, dob:String) {
         val db = FirebaseFirestore.getInstance()
-        var valid: Boolean = false
-        db.collection("users")
-            .whereEqualTo("username", username)
-            .get()
-            .addOnSuccessListener {
-                if (it.isEmpty){
-                    valid = true
-                    Toast.makeText(requireContext(), "{$valid}", Toast.LENGTH_SHORT).show()
-                }
-            }
-        if (valid == true){
-            Toast.makeText(requireContext(), "asdsadasd", Toast.LENGTH_SHORT).show()
-        }
-        return valid
-    }
+            db.collection("users")
+                .get()
+                .addOnSuccessListener {
+                    val birthdate = SimpleDateFormat("dd/MM/yyyy").parse(dob.toString())
+                    val age = (Date().time - birthdate.time)/(31556952000)
+                    val user: User = User(username, email, password, phone, dob)
 
+                    for (doc in it) {
+                        when {
+                            username.toString() == doc.data.get("username").toString() -> {
+                                Toast.makeText(requireContext(), "Username existed", Toast.LENGTH_SHORT).show()
+                            }
+                            email.toString() == doc.data.get("email").toString() -> {
+                                Toast.makeText(requireContext(), "Email existed", Toast.LENGTH_SHORT).show()
+                            }
+                            phone.toString() == doc.data.get("phone").toString() -> {
+                                Toast.makeText(requireContext(), "Phone existed", Toast.LENGTH_SHORT).show()
+                            }
+                            password.toString() != conPassword.toString() -> {
+                                Toast.makeText(requireContext(), "Password does not match", Toast.LENGTH_SHORT).show()
+                            }
+                            age < 12 -> {
+                                Toast.makeText(requireContext(), "Underage", Toast.LENGTH_SHORT).show()
+                            }
+                            else -> {
+                                db.collection("users")
+                                    .add(user).addOnSuccessListener {
+                                        Toast.makeText(requireContext(), "Registered successful", Toast.LENGTH_SHORT).show()
+                                    }
+                                    .addOnFailureListener {
+                                        Toast.makeText(requireContext(), "Registered fail", Toast.LENGTH_SHORT).show()
+                                    }
+                            }
+                        }
+                    }
+                }
+    }
 }
