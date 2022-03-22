@@ -27,6 +27,8 @@ class RegisterFragment : Fragment(){
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
+    private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+    val passwordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +56,7 @@ class RegisterFragment : Fragment(){
                 val birthdate = binding.etDob.text.toString()
 
                 addUser(username, email, password, conPassword, phone, birthdate)
+
 
             }
 
@@ -84,23 +87,44 @@ class RegisterFragment : Fragment(){
                         when {
                             username.toString() == doc.data.get("username").toString() -> {
                                 Toast.makeText(requireContext(), "Username existed", Toast.LENGTH_SHORT).show()
+                                break
                             }
                             email.toString() == doc.data.get("email").toString() -> {
                                 Toast.makeText(requireContext(), "Email existed", Toast.LENGTH_SHORT).show()
+                                break
+                            }
+                            !email.matches(emailPattern.toRegex()) -> {
+                                Toast.makeText(requireContext(), "Invalid email address",Toast.LENGTH_SHORT).show()
+                                break
                             }
                             phone.toString() == doc.data.get("phone").toString() -> {
                                 Toast.makeText(requireContext(), "Phone existed", Toast.LENGTH_SHORT).show()
+                                break
+                            }
+                            phone.toString().length > 11 || phone.toString().length < 10-> {
+                                Toast.makeText(requireContext(), "Phone Invalid", Toast.LENGTH_SHORT).show()
+                                break
                             }
                             password.toString() != conPassword.toString() -> {
                                 Toast.makeText(requireContext(), "Password does not match", Toast.LENGTH_SHORT).show()
+                                break
+                            }
+                            !password.matches(passwordPattern.toRegex()) -> {
+                                Toast.makeText(requireContext(), "Password Invalid", Toast.LENGTH_SHORT).show()
+                                break
                             }
                             age < 12 -> {
                                 Toast.makeText(requireContext(), "Underage", Toast.LENGTH_SHORT).show()
+                                break
                             }
                             else -> {
                                 db.collection("users")
                                     .add(user).addOnSuccessListener {
                                         Toast.makeText(requireContext(), "Registered successful", Toast.LENGTH_SHORT).show()
+                                        val transaction = parentFragmentManager.beginTransaction()
+                                        val fragment = LoginFragment()
+                                        transaction.replace(R.id.account_fragment, fragment)
+                                        transaction.commit()
                                     }
                                     .addOnFailureListener {
                                         Toast.makeText(requireContext(), "Registered fail", Toast.LENGTH_SHORT).show()
