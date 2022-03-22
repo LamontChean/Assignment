@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.lamont.assignment.databinding.ActivityMainBinding
 import com.lamont.assignment.databinding.FragmentLoginBinding
 
 
