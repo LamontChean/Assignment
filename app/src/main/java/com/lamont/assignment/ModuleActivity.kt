@@ -1,12 +1,16 @@
 package com.lamont.assignment
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 
 
 class ModuleActivity : AppCompatActivity() {
@@ -19,20 +23,22 @@ class ModuleActivity : AppCompatActivity() {
         val navController = findNavController(R.id.main_fragment)
         bottomNavigationView.setupWithNavController(navController)
 
-        //Test database
-        val db = FirebaseFirestore.getInstance()
-        val test = hashMapOf<String, Any>(
-            "test" to "testing1"
-        )
-
-        db.collection("try")
-            .add(test)
-            .addOnSuccessListener {
-                Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Fail", Toast.LENGTH_LONG).show()
-            }
-
+        //Coroutine to check latest password
+//        CoroutineScope(IO).launch {
+//            val sharedPreferences = getSharedPreferences("SHARE_PREF", Context.MODE_PRIVATE)
+//            val db = FirebaseFirestore.getInstance()
+//            var username = sharedPreferences!!.getString("username", null)
+//            var password = sharedPreferences!!.getString("password", null)
+//            db.collection("users")
+//                .document(username!!)
+//                .get()
+//                .addOnSuccessListener { document ->
+//                    if(document.data?.get("password") != password) {
+//                        val intent = Intent(applicationContext, MainActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
+//                    }
+//                }
+//        }
     }
 }

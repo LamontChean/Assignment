@@ -22,7 +22,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.system.exitProcess
 
-
 class RegisterFragment : Fragment(){
 
     private var _binding: FragmentRegisterBinding? = null
@@ -57,10 +56,7 @@ class RegisterFragment : Fragment(){
 
                 addUser(username, email, password, conPassword, phone, birthdate)
 
-
             }
-
-
 
         val systemCal = Calendar.getInstance()
         val year = systemCal.get(Calendar.YEAR)
@@ -118,8 +114,8 @@ class RegisterFragment : Fragment(){
                                 break
                             }
                             else -> {
-                                db.collection("users")
-                                    .add(user).addOnSuccessListener {
+                                db.collection("users").document(username)
+                                    .set(user).addOnSuccessListener {
                                         Toast.makeText(requireContext(), "Registered successful", Toast.LENGTH_SHORT).show()
                                         val transaction = parentFragmentManager.beginTransaction()
                                         val fragment = LoginFragment()
