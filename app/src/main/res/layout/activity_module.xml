@@ -58,7 +58,9 @@
         app:itemRippleColor="@color/white"
         app:itemIconTint="@color/icons_color"
         app:itemTextColor="@color/icons_color"
-        />
+        >
 
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

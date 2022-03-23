@@ -3,14 +3,23 @@ package com.lamont.assignment
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.PopupMenu
+import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.lamont.assignment.databinding.ActivityMainBinding
+import com.lamont.assignment.databinding.ActivityModuleBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 
 class ModuleActivity : AppCompatActivity() {
@@ -40,5 +49,13 @@ class ModuleActivity : AppCompatActivity() {
 //                    }
 //                }
 //        }
+
     }
+
+    fun popupMenu(view: View) {
+        val popupMenu = PopupMenu(applicationContext, findViewById(R.id.bottom_nav))
+        popupMenu.inflate(R.menu.popup_menu)
+        popupMenu.show()
+    }
+
 }

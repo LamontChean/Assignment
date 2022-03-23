@@ -14,7 +14,9 @@
     <item
         android:id="@+id/post"
         android:icon="@drawable/add_post"
-        android:title="@string/add_post" />
+        android:title="@string/add_post"
+
+        />
     <item
         android:id="@+id/quiz"
         android:icon="@drawable/puzzle_piece"
@@ -25,3 +27,4 @@
         android:icon="@drawable/profile"
         android:title="@string/profile" />
 </menu>
+
