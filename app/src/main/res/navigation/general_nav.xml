@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/general_nav"
-    app:startDestination="@id/forum">
+    app:startDestination="@id/requestFragment">
 
     <fragment
         android:id="@+id/profile"
@@ -25,4 +25,9 @@
         android:name="com.lamont.assignment.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.lamont.assignment.RequestFragment"
+        android:label="fragment_request"
+        tools:layout="@layout/fragment_request" />
 </navigation>

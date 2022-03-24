@@ -4,34 +4,116 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RequestFragment">
+    tools:context=".RequestFragment"
+    android:scrollbars="vertical"
+    android:paddingHorizontal="20dp">
 
     <RadioGroup
         android:id="@+id/rgCategory"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="20dp"
         android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/foodBeverage"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="F&B"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:elevation="8dp"
+            android:minHeight="48dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="6dp"
+            android:text="F&amp;B"
+            android:textColor="@drawable/custom_radio_text_color" />
+
         <RadioButton
             android:id="@+id/education"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Educational"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:elevation="8dp"
+            android:minHeight="48dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="6dp"
+            android:text="Educational"
+            android:textColor="@drawable/custom_radio_text_color" />
+
         <RadioButton
-            android:id=""
+            android:id="@+id/other"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-
-
-
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/custom_radio_button"
+            android:button="@color/transparent"
+            android:elevation="8dp"
+            android:minHeight="48dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="6dp"
+            android:text="Other"
+            android:textColor="@drawable/custom_radio_text_color" />
     </RadioGroup>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/desc_box"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/custom_purple_round_card"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+        <EditText
+            android:id="@+id/etRequestDesc"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/custom_input"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"
+            android:padding="10dp"
+            android:hint="Description"
+            android:gravity="top"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="@drawable/custom_oval_button"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/desc_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/desc_box"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:background="@drawable/custom_oval_button"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/desc_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/desc_box"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
