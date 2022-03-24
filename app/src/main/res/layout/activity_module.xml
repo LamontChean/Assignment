@@ -70,5 +70,6 @@
         android:layout_margin="5dp"
         android:src="@drawable/add_post"
         android:backgroundTint="@color/theme_blue"
+        android:onClick="displayPopupMenu"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

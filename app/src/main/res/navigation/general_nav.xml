@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/profile"
-        android:name="com.lamont.assignment.Profile"
+        android:name="com.lamont.assignment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_forum" />
     <fragment
         android:id="@+id/quiz"
-        android:name="com.lamont.assignment.Quiz"
+        android:name="com.lamont.assignment.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" />
 </navigation>
