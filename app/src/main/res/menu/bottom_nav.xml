@@ -11,12 +11,7 @@
         android:icon="@drawable/white_flag"
         android:title="@string/white_flag"
         />
-    <item
-        android:id="@+id/post"
-        android:icon="@drawable/add_post"
-        android:title="@string/add_post"
 
-        />
     <item
         android:id="@+id/quiz"
         android:icon="@drawable/puzzle_piece"
