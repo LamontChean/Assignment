@@ -29,7 +29,7 @@
             android:minHeight="48dp"
             android:paddingHorizontal="20dp"
             android:paddingVertical="6dp"
-            android:text="F&amp;B"
+            android:text="@string/f_amp_b"
             android:textColor="@drawable/custom_radio_text_color" />
 
         <RadioButton
@@ -43,7 +43,7 @@
             android:minHeight="48dp"
             android:paddingHorizontal="20dp"
             android:paddingVertical="6dp"
-            android:text="Educational"
+            android:text="@string/educational"
             android:textColor="@drawable/custom_radio_text_color" />
 
         <RadioButton
@@ -57,7 +57,7 @@
             android:minHeight="48dp"
             android:paddingHorizontal="20dp"
             android:paddingVertical="6dp"
-            android:text="Other"
+            android:text="@string/other"
             android:textColor="@drawable/custom_radio_text_color" />
     </RadioGroup>
 
@@ -71,6 +71,7 @@
         android:background="@drawable/custom_purple_round_card"
         android:layout_marginTop="20dp"
         android:padding="20dp">
+
         <EditText
             android:id="@+id/etRequestDesc"
             android:layout_width="280dp"
@@ -82,16 +83,17 @@
             android:minHeight="200dp"
             android:maxHeight="400dp"
             android:padding="10dp"
-            android:hint="Description"
+            android:hint="@string/description"
             android:gravity="top"
             />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="@string/submit"
         android:background="@drawable/custom_oval_button"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/desc_box"
@@ -105,7 +107,7 @@
         android:id="@+id/btnCancel"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:background="@drawable/custom_oval_button"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/desc_box"

@@ -9,7 +9,7 @@
 
     <item android:state_checked="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/purple_card" />
+            <solid android:color="#bbbbbb" />
             <corners android:radius="8dp" />
         </shape>
     </item>
