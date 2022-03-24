@@ -59,12 +59,13 @@ class ModuleActivity : AppCompatActivity() {
         val popupMenu = PopupMenu(applicationContext, findViewById(R.id.addPost))
         popupMenu.inflate(R.menu.popup_menu)
         popupMenu.setOnMenuItemClickListener {
+            val navController = findNavController(R.id.main_fragment)
             when(it.itemId) {
                 R.id.addForum -> {
 
                 }
                 else -> {
-
+                    navController.navigate(R.id.requestFragment)
                 }
             }
             return@setOnMenuItemClickListener true
